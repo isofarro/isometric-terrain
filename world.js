@@ -11,7 +11,7 @@
     ],
     viewport,
     viewContext,
-    start = { x: 392, y: 240 },
+    start = { x: 392, y: 120 },
     tileSize = { x:48, y:24, h:16 };
 
     function drawMap(map) {
