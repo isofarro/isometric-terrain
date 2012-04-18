@@ -15,22 +15,21 @@
     tileSize = { x:48, y:24, h:16 };
 
     function drawMap(map) {
-        var i, j, k, l,
-            height, pos;
-        for(i = 0, j = map.length - 1; i < j; i++) {
-            for(k = 0, l = map[i].length - 1; k < l; k++) {
-                height = {
-                    top:    map[i][k],
-                    right:  map[i][k+1],
-                    bottom: map[i+1][k+1],
-                    left:   map[i+1][k]
-                };
-                pos = {
-                    x: k,
-                    y: i
-                };
-                drawTile(pos, height);
-            }
+        var x, y,
+            width = map[0].length,
+            current_node = map.length * width;
+        while (current_node--) {
+            x = current_node % width;
+            y = ~~(current_node / width);
+            drawTile({
+                x: x,
+                y: y
+            }, {
+                top:    map[y-1][x-1],
+                right:  map[y-1][x],
+                bottom: map[y][x],
+                left:   map[y][x-1]
+            });
         }
     }
 
