@@ -1,0 +1,7 @@
+#viewport {
+	height: 600px;
+	width:  800px;
+	border: 2px solid #ccc;
+	background: #333;
+	color: #eee;
+}
