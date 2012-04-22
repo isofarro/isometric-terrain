@@ -1,9 +1,7 @@
 Isometric terrain renderer
 ==========================
 
-Playing around with techniques for generating isometric terrains, ala SimCity 3000.
-
-I blame notch, watching him code the 3D rendering of 0x10c reignited my interest in playing around with isometric projections.
+Experimenting with techniques for generating isometric terrains using heightmaps (a la SimCity 3000). And using solid colour polygons.
 
 This is a hack. I'm playing around more to understand the ideas and techniques behind isometric rendering. So don't use this for your next blockbuster game, mmmmkay?
 
