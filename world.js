@@ -44,6 +44,7 @@
         viewContext.lineTo(left, top + tileSize.y + tileSize.y - (height.bottom * tileSize.h) );
         viewContext.lineTo(left - tileSize.x, top + tileSize.y - (height.left * tileSize.h) );
         viewContext.lineTo(left, top - (height.top * tileSize.h) );
+        viewContext.fill();
         viewContext.stroke();
         viewContext.closePath();
     }
@@ -54,7 +55,8 @@
         viewport    = document.getElementById('viewport');
         viewContext = viewport.getContext('2d');
 
-        viewContext.strokeStyle = '#aaa';
+        viewContext.strokeStyle = '#365722';
+        viewContext.fillStyle   = '#5c704b';
         viewContext.lineWidth   = 1;
 
         drawMap(nodes);
