@@ -7,7 +7,11 @@ I blame notch, watching him code the 3D rendering of 0x10c reignited my interest
 
 This is a hack. I'm playing around more to understand the ideas and techniques behind isometric rendering. So don't use this for your next blockbuster game, mmmmkay?
 
+Demo: http://sandbox.isolutia.com/isometric-terrain/
 
+Contributors:
+* [Mike Davies](http://github.com/isofarro)
+* [Tim Huegdon](http://github.com/nefarioustim)
 
 License
 -------
