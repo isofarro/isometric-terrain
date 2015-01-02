@@ -31,6 +31,7 @@
 
         while (--current_node) {
             x = current_node % width;
+            if (x === 0) continue;
             y = ~~(current_node / width);
             drawTile({
                 x: x,
