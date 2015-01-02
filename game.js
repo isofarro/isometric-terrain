@@ -33,6 +33,7 @@
             x = current_node % width;
             if (x === 0) continue;
             y = ~~(current_node / width);
+            if (y === 0) continue;
             drawTile({
                 x: x,
                 y: y
