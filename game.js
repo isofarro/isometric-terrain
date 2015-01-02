@@ -22,13 +22,13 @@
     };
 
     function initMapRender() {
-        var chunk = global.GAME.map.getChunk(1, 1);
+        var chunk = global.GAME.map.getChunk(2, 2);
         renderChunk(chunk);
     };
 
     function renderChunk(chunk) {
         var x, y,
-            width = 8,
+            width = 16,
             current_node = chunk.length;
 
         while (--current_node) {
