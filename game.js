@@ -34,15 +34,19 @@
             if (x === 0) continue;
             y = ~~(current_node / width);
             if (y === 0) continue;
-            drawTile({
-                x: x,
-                y: y
-            }, {
-                top:    parseInt(chunk[current_node - width - 1]),
-                right:  parseInt(chunk[current_node - width]),
-                bottom: parseInt(chunk[current_node]),
-                left:   parseInt(chunk[current_node - 1])
-            });
+
+            drawTile(
+                {
+                    x: x,
+                    y: y
+                },
+                {
+                    top:    parseInt(chunk[current_node - width - 1]),
+                    right:  parseInt(chunk[current_node - width]),
+                    bottom: parseInt(chunk[current_node]),
+                    left:   parseInt(chunk[current_node - 1])
+                }
+            );
         }
     };
 
