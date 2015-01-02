@@ -46,6 +46,27 @@
         }
     };
 
+
+    function getMinMaxHeight(height) {
+        var minMax = {
+            min: height.top,
+            max: height.top
+        };
+
+        ['right', 'bottom', 'left'].map(function(dir) {
+            var dirVal = height[dir];
+            if (dirVal > minMax.max) { minMax.max = dirVal; }
+            else if (dirVal < minMax.min) { minMax.min = dirVal; }
+        });
+
+        return minMax;
+    }
+
+    function calcSlope(height) {
+        var minMax = getMinMaxHeight(height);
+        return minMax.max - minMax.min;
+    }
+
     function drawTile(pos, height) {
         var left = start.x + (tileSize.x * pos.x) - (tileSize.x * pos.y),
             top  = start.y + (tileSize.y * pos.x) + (tileSize.y * pos.y);
@@ -57,7 +78,7 @@
         viewContext.lineTo(left, top + tileSize.y + tileSize.y - (height.bottom * tileSize.h) );
         viewContext.lineTo(left - tileSize.x, top + tileSize.y - (height.left * tileSize.h) );
         viewContext.lineTo(left, top - (height.top * tileSize.h) );
-        viewContext.fillStyle = fillColour[height.bottom];
+        viewContext.fillStyle = fillColour[calcSlope(height)];
         viewContext.fill();
         viewContext.stroke();
         viewContext.closePath();
