@@ -2,7 +2,8 @@
     var viewport, viewContext,
         start = { x: 392, y: 120 },
         tileSize = { x:36, y:18, h:12 },
-        fillColour = ['#01A611', '#018E0E', '#018E0E', '#007B0C', '#00680A', '#005C09'];
+        //tileSize = { x:24, y:12, h:8 },
+        fillColour = ['#01A611', '#018E0E', '#007B0C', '#00680A', '#005C09', '#005C09'];
 
     function initGame() {
         //console.log("Initialising game");
