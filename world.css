@@ -1,7 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #viewport {
 	height: 600px;
-	width:  800px;
+	width:  100%;
 	border: 2px solid #ccc;
-	background: #333;
+	background: #87CEEB;
 	color: #eee;
 }
